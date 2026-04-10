@@ -1,0 +1,11 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'curvert'
+    static_configs:
+      - targets: ['curvert:3000']  # ← nome do container no compose
+
+  - job_name: 'listen'
+    static_configs:
+      - targets: ['listen:3001']
